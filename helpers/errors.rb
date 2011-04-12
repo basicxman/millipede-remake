@@ -14,6 +14,8 @@ module GameHelpers
         log_file.puts "[#{severity.to_s}] #{error_message}"
       end
 
+      puts "[#{severity.to_s}] #{error_message}"
+
       severity_based_log = log_file_path_for_severity(severity)
 
       if severity_based_log.nil?
@@ -25,7 +27,7 @@ module GameHelpers
       end
     end
 
-    def log_file_path_for_severity(severity)
+    def self.log_file_path_for_severity(severity)
       return case severity
         when :notice  then Configuration::NOTICE_LOG_FILE
         when :warning then Configuration::WARNING_LOG_FILE
