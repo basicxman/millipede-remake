@@ -9,9 +9,9 @@ module GameHelpers
 
   module Mushroom
     
-    def self.colour_to_image_path(colour)
-      image_string = Configuration::IMAGE_PATH + "/mushrooms/mushroom-#{colour.to_s}.png"
-      return image_string if File.exists? image_string
+    def self.colour_to_sprite_path(colour)
+      sprite_string = Configuration::IMAGE_PATH + "/mushrooms/mushroom-#{colour.to_s}.png"
+      return sprite_string if File.exists? sprite_string
       nil
     end
 

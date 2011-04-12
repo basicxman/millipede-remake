@@ -9,6 +9,7 @@ require File.expand_path(File.dirname(__FILE__) + "/helpers/game_helpers")
 require File.expand_path(File.dirname(__FILE__) + "/game_objects")
 require File.expand_path(File.dirname(__FILE__) + "/configuration")
 require File.expand_path(File.dirname(__FILE__) + "/pre_game")
+require File.expand_path(File.dirname(__FILE__) + "/generators")
 
 class GameWindow < Gosu::Window
 
@@ -19,6 +20,8 @@ class GameWindow < Gosu::Window
 
     @objects_to_update = []
     @objects_to_draw   = []
+
+    @objects_to_draw += Generators::Mushrooms::scatteredMushrooms(self, 50)
   end
 
   def update

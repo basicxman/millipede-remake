@@ -13,22 +13,27 @@ module GameObjects
     def initialize(window, colour, x, y) 
       @window = window
       @colour = colour
-      @image_path = get_image_path
+      @sprite_path = get_sprite_path
       @cur_x  = x
       @cur_y  = y
+      @cur_z  = Configuration::ZIndex::Mushroom
 
-      if @image_path.nil?
-        GameHelpers::Errors::throw("Could not find mushroom image sprite for colour #{colour}.", :warning)
+      if @sprite_path.nil?
+        GameHelpers::Errors::throw("Could not find mushroom sprite sprite for colour #{colour}.", :warning)
         @colour = Configuration::DEFAULT_MUSHROOM_COLOUR
-        @image_path = get_image_path
+        @sprite_path = get_sprite_path
       end
 
-      @image  = Gosu::Image.new(@window, @image_path, false)
+      @object = Gosu::Image.new(@window, @sprite_path, false)
     end
 
-    def get_image_path
-      return GameHelpers::Mushroom::colour_to_image_path(@colour)
+    def get_sprite_path
+      return GameHelpers::Mushroom::colour_to_sprite_path(@colour)
     end   
+
+    def draw
+      @object.draw(@cur_x, @cur_y, @cur_z)
+    end
     
   end
 
