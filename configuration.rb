@@ -9,8 +9,8 @@ module Configuration
 
   IMAGE_PATH = "./images"
 
-  GAME_WIDTH  = 900
-  GAME_HEIGHT = 1024
+  GAME_WIDTH  = 700
+  GAME_HEIGHT = 900
 
   PLAYER_AREA_HEIGHT = 150
 
