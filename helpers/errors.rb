@@ -10,14 +10,15 @@ module GameHelpers
   module Errors
     
     def self.throw(error_message, severity)
+      log_string = "[#{Time.now.to_i}] [#{severity.to_s}] #{error_message}"
       File.open(Configuration::LOG_FILE, "a") do |log_file|
-        log_file.puts "[#{severity.to_s}] #{error_message}"
+        log_file.puts log_string
       end
 
-      puts "[#{severity.to_s}] #{error_message}"
+      $errors ||= []
+      $errors << log_string
 
       severity_based_log = log_file_path_for_severity(severity)
-
       if severity_based_log.nil?
         throw("Tried to log error message '#{error_message}' but encountered an invalid severity level.", :error)
       else
