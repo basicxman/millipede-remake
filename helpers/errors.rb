@@ -15,7 +15,6 @@ module GameHelpers
         log_file.puts log_string
       end
 
-      puts log_string
       $errors ||= []
       $errors << log_string
 
