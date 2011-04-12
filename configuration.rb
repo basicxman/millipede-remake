@@ -5,6 +5,8 @@
 
 module Configuration
 
+  DEBUG_MODE = true
+
   IMAGE_PATH = "./images"
 
   GAME_WIDTH  = 900

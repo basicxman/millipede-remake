@@ -15,6 +15,7 @@ module GameHelpers
         log_file.puts log_string
       end
 
+      puts log_string if Configuration::DEBUG_MODE
       $errors ||= []
       $errors << log_string
 
