@@ -3,6 +3,6 @@
 # Millipede Remake
 # Game Object Includes
 
-require File.expand_path(File.dirname(__FILE__) + '/objects/mushroom')
+require 'objects/mushroom'
 
 module GameObjects; end

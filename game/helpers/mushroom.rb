@@ -3,7 +3,7 @@
 # Millipede Remake
 # Mushroom Helper.
 
-require File.expand_path(File.dirname(__FILE__) + '/../configuration')
+require 'configuration'
 
 module GameHelpers
 

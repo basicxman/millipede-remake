@@ -5,11 +5,11 @@
 # Millipede Remake
 # Main game file.
 
-require File.expand_path(File.dirname(__FILE__) + "/helpers/game_helpers")
-require File.expand_path(File.dirname(__FILE__) + "/game_objects")
-require File.expand_path(File.dirname(__FILE__) + "/configuration")
-require File.expand_path(File.dirname(__FILE__) + "/pre_game")
-require File.expand_path(File.dirname(__FILE__) + "/generators")
+require 'helpers/game_helpers'
+require 'game_objects'
+require 'configuration'
+require 'pre_game'
+require 'generators'
 
 class GameWindow < Gosu::Window
 

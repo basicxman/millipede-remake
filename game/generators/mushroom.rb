@@ -3,9 +3,9 @@
 # Millipede Remake
 # Generates sets of Mushrooms.
 
-require File.expand_path(File.dirname(__FILE__) + "/../configuration")
-require File.expand_path(File.dirname(__FILE__) + "/../helpers/game_helpers")
-require File.expand_path(File.dirname(__FILE__) + "/../game_objects.rb")
+require 'configuration'
+require 'helpers/game_helpers'
+require 'game_objects'
 
 module Generators
   

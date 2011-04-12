@@ -3,9 +3,9 @@
 # Millipede Remake
 # Game Helpers Includes
 
-require File.expand_path(File.dirname(__FILE__) + '/mushroom')
-require File.expand_path(File.dirname(__FILE__) + '/errors')
-require File.expand_path(File.dirname(__FILE__) + '/map')
+require 'helpers/mushroom'
+require 'helpers/errors'
+require 'helpers/map'
 
 module GameHelpers
 
