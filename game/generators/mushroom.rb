@@ -13,8 +13,8 @@ module Generators
 
     def self.scatteredMushrooms(window, quantity)
       mushroom_set = []
-      x_tiles = GameHelpers::Map::total_mushroom_area_width / Configuration::MUSHROOM_WIDTH
-      y_tiles = GameHelpers::Map::total_mushroom_area_height / Configuration::MUSHROOM_HEIGHT
+      x_tiles = GameHelpers::Map::total_mushroom_area_width / Configuration::Mushroom::MUSHROOM_WIDTH
+      y_tiles = GameHelpers::Map::total_mushroom_area_height / Configuration::Mushroom::MUSHROOM_HEIGHT
 
       random_x_set = GameHelpers::generate_random_set(quantity, 0, x_tiles)
       random_y_set = GameHelpers::generate_random_set(quantity, 0, y_tiles)
@@ -40,8 +40,8 @@ module Generators
         end
       end
 
-      random_x_set.map! { |x| x *= Configuration::MUSHROOM_WIDTH }
-      random_y_set.map! { |y| y *= Configuration::MUSHROOM_HEIGHT }
+      random_x_set.map! { |x| x *= Configuration::Mushroom::MUSHROOM_WIDTH }
+      random_y_set.map! { |y| y *= Configuration::Mushroom::MUSHROOM_HEIGHT }
       0.upto(random_x_set.length - 1) do |index|
         mushroom_set << GameObjects::Mushroom.new(window, :red, random_x_set[index], random_y_set[index])
       end

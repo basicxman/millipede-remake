@@ -8,11 +8,11 @@ module GameHelpers
   module Map
     
     def self.total_mushroom_area_width
-      Configuration::GAME_WIDTH - Configuration::MUSHROOM_WIDTH
+      Configuration::GAME_WIDTH - Configuration::Mushroom::MUSHROOM_WIDTH
     end
 
     def self.total_mushroom_area_height
-      Configuration::GAME_HEIGHT - Configuration::PLAYER_AREA_HEIGHT - Configuration::MUSHROOM_HEIGHT
+      Configuration::GAME_HEIGHT - Configuration::PLAYER_AREA_HEIGHT - Configuration::Mushroom::MUSHROOM_HEIGHT
     end
 
   end

@@ -17,10 +17,11 @@ module GameObjects
       @cur_x  = x
       @cur_y  = y
       @cur_z  = Configuration::ZIndex::Mushroom
+      @cur_health = Configuration::Mushroom::STARTING_MUSHROOM_HEALTH
 
       if @sprite_path.nil?
         GameHelpers::Errors::throw("Could not find mushroom sprite sprite for colour #{colour}.", :warning)
-        @colour = Configuration::DEFAULT_MUSHROOM_COLOUR
+        @colour = Configuration::Mushroom::DEFAULT_MUSHROOM_COLOUR
         @sprite_path = get_sprite_path
       end
 
