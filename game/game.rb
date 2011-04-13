@@ -22,6 +22,7 @@ class GameWindow < Gosu::Window
     @objects_to_draw   = []
 
     @objects_to_draw += Generators::Mushrooms::scatteredMushrooms(self, 80)
+    @objects_to_draw << Generators::Players::newPlayer(self)
   end
 
   def update
